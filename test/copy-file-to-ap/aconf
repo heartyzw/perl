@@ -1,0 +1,9 @@
+config remoteac 'normal'
+        option disabled '0'
+        option sip '10.3.0.200'
+        option encrypton '1'
+        option cloudinterface 'http://10.3.0.200/Ac/Acapi'
+
+config clientac 'client'
+        option rssi     '-70'
+        option disabled '1'

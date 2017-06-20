@@ -1,0 +1,33 @@
+config wifi-device  radio0
+	option type     mac80211
+	option channel  157
+	option hwmode	11a
+	option path	'pci0000:00/0000:00:00.0'
+	option htmode	VHT80
+	# REMOVE THIS LINE TO ENABLE WIFI:
+        option txpower  '25'
+config wifi-iface
+	option device   radio0
+	option network  lan
+	option mode     ap
+	option ssid     airocov-office
+	option encryption "psk2"
+        option key      "airocov178"
+
+config wifi-device  radio1
+	option type     mac80211
+	option channel  1
+	option hwmode	11n
+	option path	'platform/qca955x_wmac'
+	option htmode	HT20
+	# REMOVE THIS LINE TO ENABLE WIFI:
+        option txpower  '25'
+
+
+config wifi-iface
+	option device   radio1
+	option network  lan
+	option mode     ap
+	option ssid     airocov-office
+	option encryption "psk2"
+        option key      "airocov178"
